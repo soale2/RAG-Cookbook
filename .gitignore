@@ -15,10 +15,9 @@ chroma_db/
 *.faiss
 
 # Node / Docusaurus
-website/node_modules/
-website/build/
-website/.docusaurus/
-website/.cache-loader/
+node_modules/
+.docusaurus/
+.cache-loader/
 
 # OS
 .DS_Store

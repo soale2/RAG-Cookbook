@@ -37,7 +37,7 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'foundations',
-        path: '../foundations',
+        path: 'foundations',
         routeBasePath: 'foundations',
         sidebarPath: require.resolve('./sidebars.js'),
         exclude: ['**/*.py', '**/.gitkeep'],
@@ -47,7 +47,7 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'naive-rag',
-        path: '../naive-rag',
+        path: 'naive-rag',
         routeBasePath: 'naive-rag',
         sidebarPath: require.resolve('./sidebars.js'),
         exclude: ['**/*.py', '**/.gitkeep'],
@@ -57,7 +57,7 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'advanced-rag',
-        path: '../advanced-rag',
+        path: 'advanced-rag',
         routeBasePath: 'advanced-rag',
         sidebarPath: require.resolve('./sidebars.js'),
         exclude: ['**/*.py', '**/.gitkeep'],
@@ -67,7 +67,7 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'agentic-rag',
-        path: '../agentic-rag',
+        path: 'agentic-rag',
         routeBasePath: 'agentic-rag',
         sidebarPath: require.resolve('./sidebars.js'),
         exclude: ['**/*.py', '**/.gitkeep'],
@@ -77,7 +77,7 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'graph-rag',
-        path: '../graph-rag',
+        path: 'graph-rag',
         routeBasePath: 'graph-rag',
         sidebarPath: require.resolve('./sidebars.js'),
         exclude: ['**/*.py', '**/.gitkeep'],
@@ -96,14 +96,14 @@ const config = {
       items: [
         {
           label: 'Foundations',
-          to: '/foundations/README',
+          to: '/foundations/00-setup/README',
           position: 'left',
         },
         {
           label: 'Tracks',
           position: 'left',
           items: [
-            { label: 'Naive RAG', to: '/naive-rag/README' },
+            { label: 'Naive RAG', to: '/naive-rag/01-retrieval/README' },
             { label: 'Advanced RAG', to: '/advanced-rag/README' },
             { label: 'Agentic RAG', to: '/agentic-rag/README' },
             { label: 'Graph RAG', to: '/graph-rag/README' },
@@ -122,14 +122,14 @@ const config = {
         {
           title: 'Curriculum',
           items: [
-            { label: 'Foundations', to: '/foundations/README' },
-            { label: 'Naive RAG', to: '/naive-rag/README' },
+            { label: 'Foundations', to: '/foundations/00-setup/README' },
+            { label: 'Naive RAG', to: '/naive-rag/01-retrieval/README' },
           ],
         },
         {
           title: 'Resources',
           items: [
-            { label: 'Reference Implementations', to: '/foundations/README' },
+            { label: 'Reference Implementations', to: '/foundations/00-setup/README' },
             { label: 'Sample Papers', href: 'https://github.com/soale2/RAG-Complete-Study-Guide/tree/main/data/papers' },
           ],
         },
@@ -140,7 +140,7 @@ const config = {
           ],
         },
       ],
-      copyright: `RAG Complete Study Guide — open source curriculum.`,
+      copyright: `RAG Complete Study Guide. Open source curriculum.`,
     },
     prism: {
       theme: themes.github,

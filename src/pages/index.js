@@ -35,7 +35,7 @@ const TRACKS = [
     desc: 'The foundational pipeline. Retrieve the most relevant chunks from a vector store, pass them to an LLM, get grounded answers.',
     modules: ['01 — Retrieval', '02 — Generation', '03 — Cloud Models'],
     status: 'active',
-    href: '/naive-rag/README',
+    href: '/naive-rag/01-retrieval/README',
   },
   {
     id: 'advanced-rag',
@@ -166,7 +166,7 @@ function Hero() {
           </p>
 
           <div className={styles.heroCtas}>
-            <Link to="/foundations/README" className={styles.btnPrimary}>
+            <Link to="/foundations/00-setup/README" className={styles.btnPrimary}>
               Start with Foundations
             </Link>
             <a
@@ -213,7 +213,7 @@ function FoundationsSection() {
         </div>
 
         <div className={styles.sectionCta}>
-          <Link to="/foundations/README" className={styles.btnPrimary}>
+          <Link to="/foundations/00-setup/README" className={styles.btnPrimary}>
             Begin Foundations →
           </Link>
         </div>
