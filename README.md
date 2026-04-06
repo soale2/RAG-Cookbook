@@ -1,35 +1,60 @@
 # RAG Complete Study Guide
 
-A concise, hands-on collection of examples and notes for building Retrieval-Augmented Generation (RAG) systems.
+A structured, hands-on curriculum for building Retrieval-Augmented Generation (RAG) systems — for Python developers who want to understand RAG from the ground up.
 
-This repository gathers sample code, document loaders, and text-splitting utilities to help you learn and prototype RAG pipelines.
+Each module combines theory, exercises, and a project. The projects are **cumulative** within each track — by the end you have a fully working pipeline.
 
-## Contents
+---
 
-- `RAG CODE 1/` — Example RAG notebook and index files (includes `Rag-file.py`, `rag_index/`, and `papers/`).
-- `RAG CODE 2/` — Production-oriented helpers (`document_loader.py`, `text_splitter.py`, `config.py`) and notes.
-- `requirements.txt` — Python dependencies used across examples.
+## How to use this guide
 
-## Quick start
+1. Start with **Foundations** — the building blocks every RAG variant depends on.
+2. Pick a **track** and work through it in order.
+3. Read the theory in each module's `README.md`, complete the exercises, then tackle the project.
 
-1. Create and activate a Python virtual environment:
+---
 
-```powershell
+## Foundations
+
+Core concepts shared across all RAG variants.
+
+| Module | Topic |
+|--------|-------|
+| [00 - Setup](./foundations/00-setup/) | Environment, Ollama, tooling |
+| [01 - Embeddings](./foundations/01-embeddings/) | Vector spaces, similarity, normalization |
+| [02 - Chunking](./foundations/02-chunking/) | Document loading, text splitting |
+| [03 - Vector Stores](./foundations/03-vector-stores/) | FAISS, ChromaDB, indexing algorithms |
+
+## Tracks
+
+| Track | Description | Status |
+|-------|-------------|--------|
+| [Naive RAG](./naive-rag/) | The baseline pipeline: retrieve chunks, generate an answer | In progress |
+| [Advanced RAG](./advanced-rag/) | Query rewriting, hybrid search, reranking | Coming soon |
+| [Agentic RAG](./agentic-rag/) | LLM-driven retrieval with tool use | Coming soon |
+| [Graph RAG](./graph-rag/) | Retrieval over knowledge graphs | Coming soon |
+
+---
+
+## Reference implementations
+
+Completed, working examples are in [`reference/`](./reference/) — use these to compare against your own work.
+
+## Setup
+
+```bash
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-2. Install dependencies:
-
-```powershell
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-3. Open the example code in `RAG CODE 1/` or the production helpers in `RAG CODE 2/` and follow the README inside each folder.
+You will also need [Ollama](https://ollama.com/) installed locally:
 
-## Notes
+```bash
+ollama pull nomic-embed-text
+ollama pull llama3.2
+```
 
-- Use `RAG CODE 1/` for exploratory experiments and `RAG CODE 2/` for a more structured implementation.
-- See `RAG CODE 2/README.md` for details on the document loader and text splitter implementations.
+## Sample papers
 
-
+Foundational RAG papers are in [`data/papers/`](./data/papers/) for use across exercises and projects.
