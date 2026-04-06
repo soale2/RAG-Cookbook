@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ─── Design tokens ─────────────────────────────────────────── */
+:root {
+  --color-primary:       #1e5c3e;
+  --color-primary-dark:  #164730;
+  --color-accent:        #b87333;
+  --color-accent-light:  #f5ebe0;
+  --color-bg:            #f8f5f0;
+  --color-surface:       #fdfcfa;
+  --color-surface-2:     #f2ede6;
+  --color-text:          #131916;
+  --color-text-muted:    #556358;
+  --color-border:        #ddd8d0;
+  --color-border-strong: #b8b0a6;
+
+  /* Docusaurus overrides */
+  --ifm-color-primary:           #1e5c3e;
+  --ifm-color-primary-dark:      #1a5036;
+  --ifm-color-primary-darker:    #174a31;
+  --ifm-color-primary-darkest:   #113a26;
+  --ifm-color-primary-light:     #246d4a;
+  --ifm-color-primary-lighter:   #2a7d55;
+  --ifm-color-primary-lightest:  #339966;
+
+  --ifm-background-color:         var(--color-bg);
+  --ifm-background-surface-color: var(--color-surface);
+
+  --ifm-font-family-base:         'DM Sans', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace:    'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  --ifm-font-size-base:           16px;
+  --ifm-line-height-base:         1.65;
+
+  --ifm-navbar-background-color:  var(--color-surface);
+  --ifm-navbar-shadow:            0 1px 0 0 var(--color-border);
+  --ifm-navbar-height:            3.5rem;
+  --ifm-navbar-link-color:        var(--color-text-muted);
+  --ifm-navbar-link-hover-color:  var(--color-primary);
+
+  --ifm-footer-background-color:  var(--color-surface-2);
+  --ifm-footer-color:             var(--color-text-muted);
+  --ifm-footer-link-color:        var(--color-text-muted);
+  --ifm-footer-link-hover-color:  var(--color-primary);
+  --ifm-footer-title-color:       var(--color-text);
+
+  --ifm-toc-border-color:         var(--color-border);
+  --ifm-hr-border-color:          var(--color-border);
+  --ifm-code-background:          var(--color-surface-2);
+
+  --ifm-heading-font-family:      'DM Sans', system-ui, sans-serif;
+  --ifm-heading-color:            var(--color-text);
+  --ifm-heading-font-weight:      600;
+
+  --ifm-global-radius:            4px;
+  --ifm-code-border-radius:       3px;
+
+  --doc-sidebar-width: 260px !important;
+}
+
+/* ─── Dark mode ──────────────────────────────────────────────── */
+[data-theme='dark'] {
+  --color-bg:           #161a18;
+  --color-surface:      #1d2420;
+  --color-surface-2:    #242c28;
+  --color-text:         #e8ede9;
+  --color-text-muted:   #8aaa90;
+  --color-border:       #2e3a32;
+  --color-border-strong:#3d4f44;
+
+  --ifm-background-color:         var(--color-bg);
+  --ifm-background-surface-color: var(--color-surface);
+  --ifm-navbar-background-color:  var(--color-surface);
+  --ifm-navbar-shadow:            0 1px 0 0 var(--color-border);
+  --ifm-footer-background-color:  var(--color-surface-2);
+  --ifm-code-background:          var(--color-surface-2);
+}
+
+/* ─── Global ─────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* Navbar */
+.navbar__title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  color: var(--color-primary) !important;
+}
+
+.navbar__link {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Docs content */
+.theme-doc-markdown h1,
+.theme-doc-markdown h2,
+.theme-doc-markdown h3 {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.theme-doc-markdown h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.theme-doc-markdown h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+}
+
+.theme-doc-markdown code {
+  font-size: 0.875em;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+}
+
+[data-theme='dark'] .theme-doc-markdown code {
+  color: #5dbe88;
+}
+
+/* Blockquote as callout */
+.theme-doc-markdown blockquote {
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-accent-light);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+[data-theme='dark'] .theme-doc-markdown blockquote {
+  background: #2a221a;
+}
+
+.theme-doc-markdown blockquote p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+/* Tables */
+.theme-doc-markdown table {
+  font-size: 0.9rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.theme-doc-markdown th {
+  background: var(--color-surface-2);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.theme-doc-markdown td {
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Sidebar */
+.menu__link {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  border-radius: 3px;
+}
+
+.menu__link--active {
+  color: var(--color-primary);
+  background: var(--color-accent-light);
+  font-weight: 600;
+}
+
+[data-theme='dark'] .menu__link--active {
+  background: #1e2a22;
+}
+
+.menu__caret::before {
+  border-color: var(--color-text-muted);
+}
