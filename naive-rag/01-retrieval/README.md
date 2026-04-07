@@ -2,7 +2,7 @@
 slug: /01-retrieval
 ---
 
-# 01 — Retrieval
+# 01 - Retrieval
 
 > **Goal:** Build a retriever that takes a natural language query and returns the most relevant chunks from your vector store. Learn top-k search, how to interpret similarity scores, and how MMR improves result diversity.
 
@@ -62,7 +62,7 @@ With L2-normalised vectors and inner product, scores are cosine similarities in 
 | 0.60–0.75 | Somewhat related |
 | Below 0.60 | Probably not relevant |
 
-These thresholds are rough guides — they vary by embedding model and domain. What matters more than the absolute score is the **gap** between results. If the top result scores 0.88 and the fifth scores 0.61, the top result is clearly stronger. If all five cluster around 0.70, the query may be ambiguous.
+These thresholds are rough guides - they vary by embedding model and domain. What matters more than the absolute score is the **gap** between results. If the top result scores 0.88 and the fifth scores 0.61, the top result is clearly stronger. If all five cluster around 0.70, the query may be ambiguous.
 
 You can filter by a minimum score threshold:
 
@@ -125,7 +125,7 @@ Use MMR when your corpus has many similar chunks (e.g. multiple papers covering 
 
 ### Metadata filtering
 
-Sometimes you want to restrict retrieval to a subset of documents — for example, only search a specific paper, or only chunks from the last year. This is metadata filtering, and it is done before or during the vector search:
+Sometimes you want to restrict retrieval to a subset of documents - for example, only search a specific paper, or only chunks from the last year. This is metadata filtering, and it is done before or during the vector search:
 
 ```python
 # With ChromaDB
@@ -152,13 +152,13 @@ With FAISS, pre-filtering requires you to build a subset index or post-filter by
 
 ## Exercises
 
-1. [Top-k Retrieval](./exercises/01-top-k) — build a retriever and run it against your FAISS index
-2. [Score Threshold](./exercises/02-score-threshold) — filter out irrelevant results using a minimum similarity score
-3. [MMR](./exercises/03-mmr) — implement Maximal Marginal Relevance and compare diversity against top-k
+1. [Top-k Retrieval](./exercises/01-top-k) - build a retriever and run it against your FAISS index
+2. [Score Threshold](./exercises/02-score-threshold) - filter out irrelevant results using a minimum similarity score
+3. [MMR](./exercises/03-mmr) - implement Maximal Marginal Relevance and compare diversity against top-k
 
 ---
 
-## Project — Part 1 (Naive RAG)
+## Project - Part 1 (Naive RAG)
 
 See [`project/`](./project/).
 

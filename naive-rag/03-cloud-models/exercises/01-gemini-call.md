@@ -2,7 +2,7 @@
 slug: /03-cloud-models/exercises/01-gemini-call
 ---
 
-# Exercise 1 — Your First Gemini Call
+# Exercise 1 - Your First Gemini Call
 
 > **Goal:** Get the Gemini API working and compare its output to `llama3.2` on the same prompt.
 
@@ -10,7 +10,7 @@ slug: /03-cloud-models/exercises/01-gemini-call
 
 ## Before you start
 
-You need an API key from [Google AI Studio](https://aistudio.google.com/). It is free. Store it in your environment — never in code:
+You need an API key from [Google AI Studio](https://aistudio.google.com/). It is free. Store it in your environment - never in code:
 
 ```bash
 export GEMINI_API_KEY="your-key-here"
@@ -47,4 +47,4 @@ Open `01_gemini_call.py`.
 
 ---
 
-[Next: Exercise 2 — Swap the Generator →](./02-swap-generator)
+[Next: Exercise 2 - Swap the Generator →](./02-swap-generator)

@@ -2,7 +2,7 @@
 slug: /01-retrieval/exercises/03-mmr
 ---
 
-# Exercise 3 — Maximal Marginal Relevance
+# Exercise 3 - Maximal Marginal Relevance
 
 > **Goal:** Implement MMR and see how it trades a small amount of relevance for meaningfully more diverse results.
 
@@ -10,7 +10,7 @@ slug: /01-retrieval/exercises/03-mmr
 
 ## Background
 
-Top-k retrieval often returns near-duplicate chunks — three slightly different versions of the same sentence. MMR fixes this by penalising candidates that are too similar to already-selected results.
+Top-k retrieval often returns near-duplicate chunks - three slightly different versions of the same sentence. MMR fixes this by penalising candidates that are too similar to already-selected results.
 
 The score for each remaining candidate is:
 

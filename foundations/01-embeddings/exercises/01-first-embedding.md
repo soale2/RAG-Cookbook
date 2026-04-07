@@ -2,7 +2,7 @@
 slug: /01-embeddings/exercises/01-first-embedding
 ---
 
-# Exercise 1 — Your First Embedding
+# Exercise 1 - Your First Embedding
 
 > **Goal:** Call the embedding API, inspect the raw output, and understand what the numbers represent.
 
@@ -34,4 +34,4 @@ Now make these changes:
 
 ---
 
-[Next: Exercise 2 — Similarity →](./02-similarity)
+[Next: Exercise 2 - Similarity →](./02-similarity)

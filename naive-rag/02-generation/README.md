@@ -2,7 +2,7 @@
 slug: /02-generation
 ---
 
-# 02 — Generation
+# 02 - Generation
 
 > **Goal:** Wire the LLM into the retrieval pipeline. Learn how to write prompts that produce faithful, grounded answers, understand why RAG reduces hallucination, and complete the end-to-end Q&A loop.
 
@@ -20,13 +20,13 @@ query
                                       └─► build prompt ─► LLM ─► answer
 ```
 
-The LLM never sees the full document corpus — only the small set of chunks the retriever selected. This is the key insight of RAG: you give the model the context it needs, just in time, rather than hoping it memorised the right facts during training.
+The LLM never sees the full document corpus - only the small set of chunks the retriever selected. This is the key insight of RAG: you give the model the context it needs, just in time, rather than hoping it memorised the right facts during training.
 
 ---
 
 ### Why RAG reduces hallucination
 
-A plain LLM generates answers from its training weights. When it does not know the answer, it often generates something plausible-sounding but wrong — a hallucination.
+A plain LLM generates answers from its training weights. When it does not know the answer, it often generates something plausible-sounding but wrong - a hallucination.
 
 RAG grounds the model by placing the relevant source text directly in the prompt. The model can then quote or paraphrase the context rather than inventing an answer. It can also say "I don't know" when the retrieved context does not contain the answer.
 
@@ -83,7 +83,7 @@ def ask(question: str, index, chunks: list[str], k: int = 5) -> str:
     return response.json()["response"].strip()
 ```
 
-This is a complete naive RAG pipeline in under 20 lines. Everything you build on top of this — reranking, query rewriting, evaluation — is an improvement to one of these three steps.
+This is a complete naive RAG pipeline in under 20 lines. Everything you build on top of this - reranking, query rewriting, evaluation - is an improvement to one of these three steps.
 
 ---
 
@@ -137,7 +137,7 @@ def has_answer(response: str) -> bool:
     return not any(p in response.lower() for p in NO_ANSWER_PHRASES)
 ```
 
-This is not foolproof — a model can hallucinate confidently — but it is a starting point. Module 02 of Advanced RAG covers proper faithfulness evaluation.
+This is not foolproof - a model can hallucinate confidently - but it is a starting point. Module 02 of Advanced RAG covers proper faithfulness evaluation.
 
 ---
 
@@ -147,18 +147,18 @@ This is not foolproof — a model can hallucinate confidently — but it is a st
 - RAG reduces hallucination by placing source text in the prompt, but only if the prompt instructs the model to stay within it.
 - The full pipeline is: embed query, retrieve top-k, build prompt, generate. That is it.
 - Keep prompts under ~4,000 tokens for fast local inference. Better retrieval beats bigger context windows.
-- Fluency is easy. Faithfulness — staying grounded in the retrieved context — is the hard part.
+- Fluency is easy. Faithfulness - staying grounded in the retrieved context - is the hard part.
 
 ---
 
 ## Exercises
 
-1. [Build a RAG Prompt](./exercises/01-build-prompt) — test how prompt wording controls faithfulness
-2. [Full Pipeline](./exercises/02-full-pipeline) — wire retrieval and generation into a working `ask()` function
+1. [Build a RAG Prompt](./exercises/01-build-prompt) - test how prompt wording controls faithfulness
+2. [Full Pipeline](./exercises/02-full-pipeline) - wire retrieval and generation into a working `ask()` function
 
 ---
 
-## Project — Part 2 (Naive RAG)
+## Project - Part 2 (Naive RAG)
 
 See [`project/`](./project/).
 

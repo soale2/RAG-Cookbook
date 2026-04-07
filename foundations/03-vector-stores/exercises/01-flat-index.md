@@ -2,7 +2,7 @@
 slug: /03-vector-stores/exercises/01-flat-index
 ---
 
-# Exercise 1 — Build a FAISS Flat Index
+# Exercise 1 - Build a FAISS Flat Index
 
 > **Goal:** Build a FAISS `IndexFlatIP` from scratch, add vectors to it, and run your first real vector search.
 
@@ -10,7 +10,7 @@ slug: /03-vector-stores/exercises/01-flat-index
 
 ## Background
 
-`IndexFlatIP` is the simplest FAISS index. It stores every vector in full and does exact inner product search — no approximation. It is correct by definition and fast enough for up to ~100k vectors.
+`IndexFlatIP` is the simplest FAISS index. It stores every vector in full and does exact inner product search - no approximation. It is correct by definition and fast enough for up to ~100k vectors.
 
 Because it does inner product, you must L2-normalise all vectors before adding them. Inner product on unit vectors equals cosine similarity.
 
@@ -36,4 +36,4 @@ Open `01_flat_index.py`.
 
 ---
 
-[Next: Exercise 2 — Persist and Reload →](./02-persist)
+[Next: Exercise 2 - Persist and Reload →](./02-persist)

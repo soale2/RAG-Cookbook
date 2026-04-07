@@ -2,7 +2,7 @@
 slug: /00-setup/exercises/01-verify-ollama
 ---
 
-# Exercise 1 — Verify Ollama
+# Exercise 1 - Verify Ollama
 
 > **Goal:** Confirm Ollama is running and the two models you need are available.
 
@@ -35,7 +35,7 @@ Run it:
 python exercises/01_verify_ollama.py
 ```
 
-You should see two green-light messages. If you see a connection error, Ollama is not running — start it with `ollama serve`.
+You should see two green-light messages. If you see a connection error, Ollama is not running - start it with `ollama serve`.
 
 ---
 
@@ -46,4 +46,4 @@ You should see two green-light messages. If you see a connection error, Ollama i
 
 ---
 
-[Next: Exercise 2 — First API Calls →](./02-first-calls)
+[Next: Exercise 2 - First API Calls →](./02-first-calls)

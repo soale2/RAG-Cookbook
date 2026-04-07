@@ -2,7 +2,7 @@
 slug: /03-vector-stores
 ---
 
-# 03 — Vector Stores
+# 03 - Vector Stores
 
 > **Goal:** Understand how vector databases work under the hood. Compare FAISS and ChromaDB, learn about indexing algorithms, and extend the project to persist your vectors in a real store.
 
@@ -23,7 +23,7 @@ def search(query: np.ndarray, index: np.ndarray, k: int) -> list[int]:
     return top_k.tolist()
 ```
 
-This is called **flat search** or **brute-force search**. It is exact — it always finds the true nearest neighbours — but it scales as O(n). With 10 million vectors, every query scans 10 million dot products.
+This is called **flat search** or **brute-force search**. It is exact - it always finds the true nearest neighbours - but it scales as O(n). With 10 million vectors, every query scans 10 million dot products.
 
 Vector stores exist to solve this scaling problem while keeping results accurate enough to be useful.
 
@@ -35,7 +35,7 @@ Vector stores exist to solve this scaling problem while keeping results accurate
 
 #### IndexFlatIP
 
-The simplest FAISS index. "Flat" means no compression, "IP" means inner product (dot product). It is exact — no approximation.
+The simplest FAISS index. "Flat" means no compression, "IP" means inner product (dot product). It is exact - no approximation.
 
 ```python
 import faiss
@@ -84,7 +84,7 @@ faiss.write_index(index, "index.faiss")
 index = faiss.read_index("index.faiss")
 ```
 
-FAISS does not store the original text — only vectors. You need to keep a parallel list that maps vector position to chunk text and metadata.
+FAISS does not store the original text - only vectors. You need to keep a parallel list that maps vector position to chunk text and metadata.
 
 ---
 
@@ -133,7 +133,7 @@ ChromaDB can also generate embeddings for you (via a built-in embedding function
 | Text storage | No | Yes |
 | Best for | Speed-critical, large-scale | General use, filtering |
 
-For the projects in this curriculum, either works. FAISS is used in the reference implementation because it is explicit — you control every step. Use ChromaDB when you want persistence and filtering without extra bookkeeping.
+For the projects in this curriculum, either works. FAISS is used in the reference implementation because it is explicit - you control every step. Use ChromaDB when you want persistence and filtering without extra bookkeeping.
 
 ---
 
@@ -145,7 +145,7 @@ Most production vector stores use ANN rather than exact search. The idea: tradin
 
 **HNSW (Hierarchical Navigable Small World)** builds a layered graph. Search starts at the top (sparse) layer and narrows down through denser layers. It is the default in most production systems because it is fast and accurate with no training step required.
 
-You do not need to implement these — FAISS and ChromaDB provide them. But understanding the trade-off (more cells/layers searched = more accurate, slower) lets you tune them correctly.
+You do not need to implement these - FAISS and ChromaDB provide them. But understanding the trade-off (more cells/layers searched = more accurate, slower) lets you tune them correctly.
 
 ---
 
@@ -154,20 +154,20 @@ You do not need to implement these — FAISS and ChromaDB provide them. But unde
 - Vector stores find nearest neighbours efficiently. The simplest version is just a dot product over all stored vectors.
 - FAISS `IndexFlatIP` is exact and fast enough for up to ~100k vectors. Use `IndexIVFFlat` or HNSW beyond that.
 - L2-normalise all vectors before storing. Inner product then equals cosine similarity.
-- FAISS only stores vectors — keep a parallel list to map indices back to text.
+- FAISS only stores vectors - keep a parallel list to map indices back to text.
 - ChromaDB adds persistence, text storage, and metadata filtering. Use it when you need those features.
 
 ---
 
 ## Exercises
 
-1. [Build a FAISS Flat Index](./exercises/01-flat-index) — embed a document, build an index, run your first vector search
-2. [Persist and Reload](./exercises/02-persist) — save the index to disk and load it without re-embedding
-3. [ChromaDB](./exercises/03-chromadb) — replicate the search using ChromaDB's built-in persistence and metadata filtering
+1. [Build a FAISS Flat Index](./exercises/01-flat-index) - embed a document, build an index, run your first vector search
+2. [Persist and Reload](./exercises/02-persist) - save the index to disk and load it without re-embedding
+3. [ChromaDB](./exercises/03-chromadb) - replicate the search using ChromaDB's built-in persistence and metadata filtering
 
 ---
 
-## Project — Part 3
+## Project - Part 3
 
 See [`project/`](./project/).
 

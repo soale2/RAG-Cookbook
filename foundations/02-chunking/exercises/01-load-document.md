@@ -2,7 +2,7 @@
 slug: /02-chunking/exercises/01-load-document
 ---
 
-# Exercise 1 — Load a Document
+# Exercise 1 - Load a Document
 
 > **Goal:** Load a real file into Python and inspect its raw text and metadata before touching any splitter.
 
@@ -10,7 +10,7 @@ slug: /02-chunking/exercises/01-load-document
 
 ## Background
 
-Before you can chunk, you need text. Langchain loaders handle the file I/O and return a list of `Document` objects — each has `.page_content` (the text) and `.metadata` (source path, page number, etc.).
+Before you can chunk, you need text. Langchain loaders handle the file I/O and return a list of `Document` objects - each has `.page_content` (the text) and `.metadata` (source path, page number, etc.).
 
 There are sample papers in `data/papers/` you can use.
 
@@ -39,4 +39,4 @@ Compare the two:
 
 ---
 
-[Next: Exercise 2 — Split Text →](./02-split-text)
+[Next: Exercise 2 - Split Text →](./02-split-text)

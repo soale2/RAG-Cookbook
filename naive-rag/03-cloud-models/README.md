@@ -2,7 +2,7 @@
 slug: /03-cloud-models
 ---
 
-# 03 — Cloud Models
+# 03 - Cloud Models
 
 > **Goal:** Make the pipeline model-agnostic. Swap Ollama for the Gemini API with minimal code changes. Understand the trade-offs between local and cloud inference so you can choose deliberately.
 
@@ -29,7 +29,7 @@ Neither is universally better. The right choice depends on your data sensitivity
 
 ### Model-agnostic design
 
-The fix is a thin abstraction over the generation step. Keep the embedding and retrieval code unchanged — only the generation function needs to know which model it is using.
+The fix is a thin abstraction over the generation step. Keep the embedding and retrieval code unchanged - only the generation function needs to know which model it is using.
 
 ```python
 from abc import ABC, abstractmethod
@@ -97,7 +97,7 @@ Install:
 pip install google-generativeai
 ```
 
-Get an API key from [Google AI Studio](https://aistudio.google.com/) and store it as an environment variable — never hardcode it:
+Get an API key from [Google AI Studio](https://aistudio.google.com/) and store it as an environment variable - never hardcode it:
 
 ```bash
 export GEMINI_API_KEY="your-key-here"
@@ -137,7 +137,7 @@ load_dotenv()
 api_key = os.environ["GEMINI_API_KEY"]
 ```
 
-Install `python-dotenv` to load `.env` files automatically. This pattern works identically for any API key — OpenAI, Anthropic, Cohere — so get into the habit now.
+Install `python-dotenv` to load `.env` files automatically. This pattern works identically for any API key - OpenAI, Anthropic, Cohere - so get into the habit now.
 
 ---
 
@@ -145,7 +145,7 @@ Install `python-dotenv` to load `.env` files automatically. This pattern works i
 
 This module keeps Ollama for embeddings and only swaps the generator. That is intentional: you already have a working embedding pipeline, and mixing embedding providers mid-project breaks your index (vectors from different models live in different spaces and cannot be compared).
 
-If you want to move embeddings to the cloud too — for example to use Google's `text-embedding-004` model — you need to rebuild the index from scratch with the new embedding model.
+If you want to move embeddings to the cloud too - for example to use Google's `text-embedding-004` model - you need to rebuild the index from scratch with the new embedding model.
 
 ```python
 import os
@@ -161,7 +161,7 @@ def embed_cloud(text: str) -> list[float]:
     return result["embedding"]
 ```
 
-The dimension for `text-embedding-004` is 768 — same as `nomic-embed-text` — so the index shape stays the same, but the vector space is different. Rebuild, do not reuse.
+The dimension for `text-embedding-004` is 768 - same as `nomic-embed-text` - so the index shape stays the same, but the vector space is different. Rebuild, do not reuse.
 
 ---
 
@@ -200,12 +200,12 @@ Exponential backoff (1s, 2s, 4s) handles transient rate limit errors without ham
 
 ## Exercises
 
-1. [Your First Gemini Call](./exercises/01-gemini-call) — call the Gemini API and compare output to llama3.2
-2. [Swap the Generator](./exercises/02-swap-generator) — introduce the Generator abstraction and switch models with one line
+1. [Your First Gemini Call](./exercises/01-gemini-call) - call the Gemini API and compare output to llama3.2
+2. [Swap the Generator](./exercises/02-swap-generator) - introduce the Generator abstraction and switch models with one line
 
 ---
 
-## Project — Part 3 (Naive RAG)
+## Project - Part 3 (Naive RAG)
 
 See [`project/`](./project/).
 

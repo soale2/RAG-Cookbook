@@ -2,7 +2,7 @@
 slug: /01-retrieval/exercises/01-top-k
 ---
 
-# Exercise 1 — Top-k Retrieval
+# Exercise 1 - Top-k Retrieval
 
 > **Goal:** Build a retriever on top of the FAISS index from Foundations. Given a query, return the k most relevant chunks with their scores.
 
@@ -33,4 +33,4 @@ Open `01_top_k.py`.
 
 ---
 
-[Next: Exercise 2 — Score Threshold →](./02-score-threshold)
+[Next: Exercise 2 - Score Threshold →](./02-score-threshold)

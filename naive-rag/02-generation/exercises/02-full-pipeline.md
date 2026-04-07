@@ -2,7 +2,7 @@
 slug: /02-generation/exercises/02-full-pipeline
 ---
 
-# Exercise 2 — Full Pipeline
+# Exercise 2 - Full Pipeline
 
 > **Goal:** Wire retrieval and generation into a single `ask(question)` function. You now have a complete, working naive RAG system.
 
@@ -30,10 +30,10 @@ Open `02_full_pipeline.py`.
    - Builds the strict prompt from Exercise 1
    - Calls `llama3.2` for the answer
    - Returns the answer string
-3. Run it against at least 5 questions — mix of in-corpus and out-of-corpus.
+3. Run it against at least 5 questions - mix of in-corpus and out-of-corpus.
 4. For each answer, also print which chunks were retrieved (the first 80 chars of each). Verify the answer is supported by what was retrieved.
 
-**Stretch:** Add a `verbose=True` parameter to `ask` that prints the full prompt before sending it to the model. Read the prompt carefully — does it look the way you expect?
+**Stretch:** Add a `verbose=True` parameter to `ask` that prints the full prompt before sending it to the model. Read the prompt carefully - does it look the way you expect?
 
 ---
 

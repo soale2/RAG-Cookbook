@@ -1,6 +1,6 @@
 # Reference Implementations
 
-Complete, working RAG pipelines. Use these to compare against your own project work — not as a starting point.
+Complete, working RAG pipelines. Use these to compare against your own project work - not as a starting point.
 
 | Folder | Description |
 |--------|-------------|

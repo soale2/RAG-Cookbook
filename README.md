@@ -1,14 +1,14 @@
 # RAG Complete Study Guide
 
-A structured, hands-on curriculum for building Retrieval-Augmented Generation (RAG) systems — for Python developers who want to understand RAG from the ground up.
+A structured, hands-on curriculum for building Retrieval-Augmented Generation (RAG) systems - for Python developers who want to understand RAG from the ground up.
 
-Each module combines theory, exercises, and a project. The projects are **cumulative** within each track — by the end you have a fully working pipeline.
+Each module combines theory, exercises, and a project. The projects are **cumulative** within each track - by the end you have a fully working pipeline.
 
 ---
 
 ## How to use this guide
 
-1. Start with **Foundations** — the building blocks every RAG variant depends on.
+1. Start with **Foundations** - the building blocks every RAG variant depends on.
 2. Pick a **track** and work through it in order.
 3. Read the theory in each module's `README.md`, complete the exercises, then tackle the project.
 
@@ -38,7 +38,7 @@ Core concepts shared across all RAG variants.
 
 ## Reference implementations
 
-Completed, working examples are in [`reference/`](./reference/) — use these to compare against your own work.
+Completed, working examples are in [`reference/`](./reference/) - use these to compare against your own work.
 
 ## Setup
 

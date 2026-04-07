@@ -2,7 +2,7 @@
 slug: /02-chunking/exercises/03-chunk-size
 ---
 
-# Exercise 3 — Chunk Size Trade-offs
+# Exercise 3 - Chunk Size Trade-offs
 
 > **Goal:** See how chunk size affects how precisely a retriever can match a specific query. Small chunks find the exact sentence; large chunks dilute it.
 
@@ -23,7 +23,7 @@ Open `03_chunk_size.py`.
 3. Write a `search(query, embeddings, chunks, k=3)` function that returns the top-3 chunks for a query.
 4. Run the same query against all three indexes and print the top result from each.
 
-Use a query that asks about a **specific detail** in the paper — a number, a name, or a single-sentence claim. Something where the answer lives in one sentence, not spread across a paragraph.
+Use a query that asks about a **specific detail** in the paper - a number, a name, or a single-sentence claim. Something where the answer lives in one sentence, not spread across a paragraph.
 
 Compare the results:
 - Which chunk size surfaces the exact sentence containing the answer?

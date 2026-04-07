@@ -2,7 +2,7 @@
 slug: /00-setup
 ---
 
-# 00 — Setup
+# 00 - Setup
 
 > **Goal:** Get your local environment ready. By the end you will have Ollama running, the right models pulled, and have made your first embedding call from Python.
 
@@ -12,7 +12,7 @@ slug: /00-setup
 
 ### Why local-first?
 
-Most RAG tutorials send every chunk and every query to a cloud API. That costs money, leaks data, and hides what is actually happening. This curriculum runs entirely on your machine during the foundations and naive RAG stages. You will see real latency, real memory usage, and real trade-offs — then move to cloud models deliberately in module 03 of Naive RAG, not by default.
+Most RAG tutorials send every chunk and every query to a cloud API. That costs money, leaks data, and hides what is actually happening. This curriculum runs entirely on your machine during the foundations and naive RAG stages. You will see real latency, real memory usage, and real trade-offs - then move to cloud models deliberately in module 03 of Naive RAG, not by default.
 
 The two tools you need are **Ollama** (runs LLMs and embedding models locally) and a **Python virtual environment** (isolates project dependencies).
 
@@ -20,7 +20,7 @@ The two tools you need are **Ollama** (runs LLMs and embedding models locally) a
 
 ### Ollama
 
-Ollama is a server that runs open-weight models locally via a simple REST API. Once it is running, you interact with it exactly like a cloud API — just pointed at `localhost` instead.
+Ollama is a server that runs open-weight models locally via a simple REST API. Once it is running, you interact with it exactly like a cloud API - just pointed at `localhost` instead.
 
 Start the server:
 
@@ -147,15 +147,15 @@ If both similarity scores look plausible, your environment is ready.
 
 - Ollama runs LLMs and embedding models locally via a REST API on `localhost:11434`.
 - Always normalise embedding vectors immediately after receiving them.
-- Use a virtual environment — never install project packages globally.
+- Use a virtual environment - never install project packages globally.
 - The embedding and generation APIs are simple HTTP POST calls. No SDK required.
 
 ---
 
 ## Exercises
 
-1. [Verify Ollama](./exercises/01-verify-ollama) — confirm models are installed and the server is running
-2. [First API Calls](./exercises/02-first-calls) — make a real embedding call and a real generation call
+1. [Verify Ollama](./exercises/01-verify-ollama) - confirm models are installed and the server is running
+2. [First API Calls](./exercises/02-first-calls) - make a real embedding call and a real generation call
 
 ---
 

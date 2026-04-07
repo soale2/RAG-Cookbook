@@ -2,7 +2,7 @@
 slug: /03-vector-stores/exercises/03-chromadb
 ---
 
-# Exercise 3 — ChromaDB
+# Exercise 3 - ChromaDB
 
 > **Goal:** Replicate the FAISS search from Exercise 1 using ChromaDB. Experience the difference: persistence and metadata filtering come for free.
 
@@ -10,7 +10,7 @@ slug: /03-vector-stores/exercises/03-chromadb
 
 ## Background
 
-FAISS is explicit — you manage vectors, you manage persistence, you manage metadata. ChromaDB wraps all of that into a collection. The trade-off: less control, more convenience.
+FAISS is explicit - you manage vectors, you manage persistence, you manage metadata. ChromaDB wraps all of that into a collection. The trade-off: less control, more convenience.
 
 ---
 

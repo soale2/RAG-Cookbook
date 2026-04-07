@@ -2,7 +2,7 @@
 slug: /02-generation/exercises/01-build-prompt
 ---
 
-# Exercise 1 — Build a RAG Prompt
+# Exercise 1 - Build a RAG Prompt
 
 > **Goal:** Write a prompt function that grounds the LLM in retrieved context, and learn exactly why prompt wording determines faithfulness.
 
@@ -36,4 +36,4 @@ Open `01_build_prompt.py`.
 
 ---
 
-[Next: Exercise 2 — Full Pipeline →](./02-full-pipeline)
+[Next: Exercise 2 - Full Pipeline →](./02-full-pipeline)

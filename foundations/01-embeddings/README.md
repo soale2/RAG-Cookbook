@@ -146,9 +146,9 @@ print(np.dot(a, c))   # low:  unrelated topics
 
 ## Exercises
 
-1. [Your First Embedding](./exercises/01-first-embedding) — call the API and inspect the raw output
-2. [Similarity](./exercises/02-similarity) — compare pairs of sentences and build score intuition
-3. [Normalisation](./exercises/03-normalisation) — see what breaks when you skip L2 normalisation
+1. [Your First Embedding](./exercises/01-first-embedding) - call the API and inspect the raw output
+2. [Similarity](./exercises/02-similarity) - compare pairs of sentences and build score intuition
+3. [Normalisation](./exercises/03-normalisation) - see what breaks when you skip L2 normalisation
 
 ---
 

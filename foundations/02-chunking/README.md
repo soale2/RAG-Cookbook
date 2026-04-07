@@ -2,7 +2,7 @@
 slug: /02-chunking
 ---
 
-# 02 — Chunking
+# 02 - Chunking
 
 > **Goal:** Understand why documents must be split before indexing, how different splitting strategies affect retrieval quality, and how to preserve metadata across chunks.
 
@@ -12,9 +12,9 @@ slug: /02-chunking
 
 ### Why chunking is necessary
 
-An embedding model compresses an entire input into a fixed-size vector — 768 numbers, regardless of whether you feed it a single sentence or a ten-page document. When you embed a long document, the vector averages out all the meaning. A query about one specific claim in that document will produce a vector that only weakly matches the full-document embedding, because the match is diluted by everything else in the document.
+An embedding model compresses an entire input into a fixed-size vector - 768 numbers, regardless of whether you feed it a single sentence or a ten-page document. When you embed a long document, the vector averages out all the meaning. A query about one specific claim in that document will produce a vector that only weakly matches the full-document embedding, because the match is diluted by everything else in the document.
 
-The solution is to split documents into smaller pieces — **chunks** — and embed each chunk independently. Now a query can match the specific chunk that contains the relevant claim, not a blurry average of the whole document.
+The solution is to split documents into smaller pieces - **chunks** - and embed each chunk independently. Now a query can match the specific chunk that contains the relevant claim, not a blurry average of the whole document.
 
 ```
 Document (10 pages)         →  one blurry vector
@@ -71,7 +71,7 @@ This is the default strategy for most RAG pipelines and what you should reach fo
 
 | Chunk size | Retrieval precision | Context per chunk | Risk |
 |-----------|--------------------|--------------------|------|
-| Small (~200 chars) | High | Low — may miss surrounding context | Fragments ideas |
+| Small (~200 chars) | High | Low - may miss surrounding context | Fragments ideas |
 | Medium (~500 chars) | Good | Good | Reasonable for most tasks |
 | Large (~1500 chars) | Lower | High | Dilutes signal, may exceed model context |
 
@@ -135,13 +135,13 @@ When the pipeline returns a chunk to the user, the `metadata` tells you which do
 
 ## Exercises
 
-1. [Load a Document](./exercises/01-load-document) — use Langchain loaders and inspect raw text and metadata
-2. [Split Text](./exercises/02-split-text) — chunk a document and confirm overlap works as expected
-3. [Chunk Size Trade-offs](./exercises/03-chunk-size) — compare retrieval precision across three chunk sizes
+1. [Load a Document](./exercises/01-load-document) - use Langchain loaders and inspect raw text and metadata
+2. [Split Text](./exercises/02-split-text) - chunk a document and confirm overlap works as expected
+3. [Chunk Size Trade-offs](./exercises/03-chunk-size) - compare retrieval precision across three chunk sizes
 
 ---
 
-## Project — Part 2
+## Project - Part 2
 
 See [`project/`](./project/).
 
