@@ -1,3 +1,7 @@
+---
+slug: /
+---
+
 # Graph RAG
 
 Retrieval over knowledge graphs rather than flat vector indexes. Captures relationships between entities that chunk-based retrieval misses.

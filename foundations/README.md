@@ -1,3 +1,7 @@
+---
+slug: /
+---
+
 # Foundations
 
 Core building blocks used by every RAG variant. Work through these before starting any track.

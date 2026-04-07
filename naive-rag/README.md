@@ -1,3 +1,7 @@
+---
+slug: /
+---
+
 # Naive RAG
 
 The foundational RAG pattern: retrieve relevant chunks, pass them to an LLM, get a grounded answer. Simple, effective, and the baseline everything else builds on.

@@ -1,3 +1,7 @@
+---
+slug: /01-embeddings
+---
+
 # 01: Embeddings
 
 > **Goal:** Understand what embeddings are, why normalization matters, and how similarity search works. By the end you will be able to embed text with Ollama and measure how semantically close two pieces of text are.
@@ -142,11 +146,9 @@ print(np.dot(a, c))   # low:  unrelated topics
 
 ## Exercises
 
-Work through these before moving to the project:
-
-1. [`exercises/01_first_embedding.py`](./exercises/01_first_embedding.py): Embed a sentence and inspect the output.
-2. [`exercises/02_similarity.py`](./exercises/02_similarity.py): Compare similarity scores across a set of sentences.
-3. [`exercises/03_normalisation.py`](./exercises/03_normalisation.py): See what happens to similarity scores when you skip normalisation.
+1. [Your First Embedding](./exercises/01-first-embedding) — call the API and inspect the raw output
+2. [Similarity](./exercises/02-similarity) — compare pairs of sentences and build score intuition
+3. [Normalisation](./exercises/03-normalisation) — see what breaks when you skip L2 normalisation
 
 ---
 

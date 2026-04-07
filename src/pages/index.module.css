@@ -70,8 +70,8 @@
 }
 
 [data-theme='dark'] .ragWord {
-  color: #5dbe88;
-  text-shadow: 3px 4px 0px rgba(184,115,51,0.08);
+  color: #8ec07c;
+  text-shadow: 3px 4px 0px rgba(250,189,47,0.12);
 }
 
 .heroSub {
@@ -239,7 +239,7 @@
 }
 
 [data-theme='dark'] .foundationCell:hover {
-  background: #1e2a22;
+  background: #3c3836;
 }
 
 .modNum {
@@ -322,8 +322,8 @@
 }
 
 [data-theme='dark'] .badgeActive {
-  color: #5dbe88;
-  border-color: #5dbe88;
+  color: #8ec07c;
+  border-color: #8ec07c;
 }
 
 .badgeSoon {
@@ -505,6 +505,33 @@
 
 .getStarted .btnPrimary:hover {
   background: white;
+}
+
+[data-theme='dark'] .getStarted {
+  background: #3c3836;
+  background-image: radial-gradient(circle, rgba(142,192,124,0.06) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+}
+
+[data-theme='dark'] .getStartedEyebrow {
+  color: #a89984;
+}
+
+[data-theme='dark'] .getStartedTitle {
+  color: #ebdbb2;
+}
+
+[data-theme='dark'] .getStartedBody {
+  color: #bdae93;
+}
+
+[data-theme='dark'] .getStarted .btnPrimary {
+  background: #8ec07c;
+  color: #1d2021 !important;
+}
+
+[data-theme='dark'] .getStarted .btnPrimary:hover {
+  background: #b8bb26;
 }
 
 

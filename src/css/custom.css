@@ -57,15 +57,27 @@
   --doc-sidebar-width: 260px !important;
 }
 
-/* ─── Dark mode ──────────────────────────────────────────────── */
+/* ─── Dark mode (Gruvbox) ────────────────────────────────────── */
 [data-theme='dark'] {
-  --color-bg:           #161a18;
-  --color-surface:      #1d2420;
-  --color-surface-2:    #242c28;
-  --color-text:         #e8ede9;
-  --color-text-muted:   #8aaa90;
-  --color-border:       #2e3a32;
-  --color-border-strong:#3d4f44;
+  --color-primary:       #8ec07c;
+  --color-primary-dark:  #7aad67;
+  --color-accent:        #fabd2f;
+  --color-accent-light:  #32302f;
+  --color-bg:            #1d2021;
+  --color-surface:       #282828;
+  --color-surface-2:     #32302f;
+  --color-text:          #ebdbb2;
+  --color-text-muted:    #a89984;
+  --color-border:        #3c3836;
+  --color-border-strong: #504945;
+
+  --ifm-color-primary:           #8ec07c;
+  --ifm-color-primary-dark:      #7aad67;
+  --ifm-color-primary-darker:    #6d9e5c;
+  --ifm-color-primary-darkest:   #527846;
+  --ifm-color-primary-light:     #a2cd91;
+  --ifm-color-primary-lighter:   #b6d9a5;
+  --ifm-color-primary-lightest:  #cae6ba;
 
   --ifm-background-color:         var(--color-bg);
   --ifm-background-surface-color: var(--color-surface);
@@ -130,7 +142,7 @@ body {
 }
 
 [data-theme='dark'] .theme-doc-markdown code {
-  color: #5dbe88;
+  color: #8ec07c;
 }
 
 /* Blockquote as callout */
@@ -143,7 +155,7 @@ body {
 }
 
 [data-theme='dark'] .theme-doc-markdown blockquote {
-  background: #2a221a;
+  background: #32302f;
 }
 
 .theme-doc-markdown blockquote p {
@@ -186,7 +198,7 @@ body {
 }
 
 [data-theme='dark'] .menu__link--active {
-  background: #1e2a22;
+  background: #3c3836;
 }
 
 .menu__caret::before {

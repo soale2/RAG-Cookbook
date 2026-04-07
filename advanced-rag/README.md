@@ -1,3 +1,7 @@
+---
+slug: /
+---
+
 # Advanced RAG
 
 Techniques that improve retrieval and generation quality beyond the naive baseline: query rewriting, hybrid search, reranking, and more.

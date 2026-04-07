@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
+import { useColorMode } from '@docusaurus/theme-common';
 import styles from './index.module.css';
 
 // ─── Data ────────────────────────────────────────────────────────────────────
@@ -35,7 +36,7 @@ const TRACKS = [
     desc: 'The foundational pipeline. Retrieve the most relevant chunks from a vector store, pass them to an LLM, get grounded answers.',
     modules: ['01 — Retrieval', '02 — Generation', '03 — Cloud Models'],
     status: 'active',
-    href: '/naive-rag/01-retrieval/README',
+    href: '/naive-rag/01-retrieval',
   },
   {
     id: 'advanced-rag',
@@ -63,13 +64,16 @@ const TRACKS = [
 // ─── Curriculum diagram ───────────────────────────────────────────────────────
 
 function CurriculumDiagram() {
-  const green    = '#1e5c3e';
-  const greenBg  = '#164730';
-  const muted    = '#b8c4bc';
-  const lineSolid = '#6b9e83';
-  const lineFaint = '#c4cfc8';
-  const textOnGreen = '#f0f5f2';
-  const textFaint   = '#8aaa92';
+  const { colorMode } = useColorMode();
+  const isDark = colorMode === 'dark';
+
+  const green       = isDark ? '#504945' : '#1e5c3e';
+  const greenBg     = isDark ? '#3c3836' : '#164730';
+  const muted       = isDark ? '#665c54' : '#b8c4bc';
+  const lineSolid   = isDark ? '#8ec07c' : '#6b9e83';
+  const lineFaint   = isDark ? '#504945' : '#c4cfc8';
+  const textOnGreen = isDark ? '#ebdbb2' : '#f0f5f2';
+  const textFaint   = isDark ? '#a89984' : '#8aaa92';
 
   return (
     <svg
@@ -166,7 +170,7 @@ function Hero() {
           </p>
 
           <div className={styles.heroCtas}>
-            <Link to="/foundations/00-setup/README" className={styles.btnPrimary}>
+            <Link to="/foundations/00-setup" className={styles.btnPrimary}>
               Start with Foundations
             </Link>
             <a
@@ -213,7 +217,7 @@ function FoundationsSection() {
         </div>
 
         <div className={styles.sectionCta}>
-          <Link to="/foundations/00-setup/README" className={styles.btnPrimary}>
+          <Link to="/foundations/00-setup" className={styles.btnPrimary}>
             Begin Foundations →
           </Link>
         </div>
@@ -326,7 +330,7 @@ function GetStartedSection() {
           You need Python 3.10+, ~8 GB of free disk space for Ollama model weights, and about 30 minutes
           to complete the setup module. Everything else is explained as you go.
         </p>
-        <Link to="/foundations/00-setup/README" className={styles.btnPrimary}>
+        <Link to="/foundations/00-setup" className={styles.btnPrimary}>
           Go to Setup →
         </Link>
       </div>

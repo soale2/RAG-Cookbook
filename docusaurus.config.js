@@ -1,5 +1,6 @@
 // @ts-check
 const { themes } = require('prism-react-renderer');
+const gruvboxDark = require('./src/prismGruvboxDark');
 
 const config = {
   title: 'RAG Complete Study Guide',
@@ -96,17 +97,17 @@ const config = {
       items: [
         {
           label: 'Foundations',
-          to: '/foundations/00-setup/README',
+          to: '/foundations',
           position: 'left',
         },
         {
           label: 'Tracks',
           position: 'left',
           items: [
-            { label: 'Naive RAG', to: '/naive-rag/01-retrieval/README' },
-            { label: 'Advanced RAG', to: '/advanced-rag/README' },
-            { label: 'Agentic RAG', to: '/agentic-rag/README' },
-            { label: 'Graph RAG', to: '/graph-rag/README' },
+            { label: 'Naive RAG', to: '/naive-rag' },
+            { label: 'Advanced RAG', to: '/advanced-rag' },
+            { label: 'Agentic RAG', to: '/agentic-rag' },
+            { label: 'Graph RAG', to: '/graph-rag' },
           ],
         },
         {
@@ -122,14 +123,14 @@ const config = {
         {
           title: 'Curriculum',
           items: [
-            { label: 'Foundations', to: '/foundations/00-setup/README' },
-            { label: 'Naive RAG', to: '/naive-rag/01-retrieval/README' },
+            { label: 'Foundations', to: '/foundations' },
+            { label: 'Naive RAG', to: '/naive-rag' },
           ],
         },
         {
           title: 'Resources',
           items: [
-            { label: 'Reference Implementations', to: '/foundations/00-setup/README' },
+            { label: 'Reference Implementations', to: '/foundations' },
             { label: 'Sample Papers', href: 'https://github.com/soale2/RAG-Complete-Study-Guide/tree/main/data/papers' },
           ],
         },
@@ -144,7 +145,7 @@ const config = {
     },
     prism: {
       theme: themes.github,
-      darkTheme: themes.dracula,
+      darkTheme: gruvboxDark,
       additionalLanguages: ['python', 'bash'],
     },
   },
