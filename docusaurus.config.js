@@ -3,13 +3,13 @@ const { themes } = require('prism-react-renderer');
 const gruvboxDark = require('./src/prismGruvboxDark');
 
 const config = {
-  title: 'RAG Complete Study Guide',
+  title: 'RAG Cookbook',
   tagline: 'A structured curriculum for Python developers building RAG systems from first principles.',
   favicon: 'img/favicon.svg',
   url: 'https://soale2.github.io',
-  baseUrl: '/RAG-Complete-Study-Guide/',
+  baseUrl: '/RAG-Cookbook/',
   organizationName: 'soale2',
-  projectName: 'RAG-Complete-Study-Guide',
+  projectName: 'RAG-Cookbook',
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
@@ -111,7 +111,7 @@ const config = {
           ],
         },
         {
-          href: 'https://github.com/soale2/RAG-Complete-Study-Guide',
+          href: 'https://github.com/soale2/RAG-Cookbook',
           label: 'GitHub',
           position: 'right',
         },
@@ -131,13 +131,13 @@ const config = {
           title: 'Resources',
           items: [
             { label: 'Reference Implementations', to: '/foundations' },
-            { label: 'Sample Papers', href: 'https://github.com/soale2/RAG-Complete-Study-Guide/tree/main/data/papers' },
+            { label: 'Sample Papers', href: 'https://github.com/soale2/RAG-Cookbook/tree/main/data/papers' },
           ],
         },
         {
           title: 'Source',
           items: [
-            { label: 'GitHub', href: 'https://github.com/soale2/RAG-Complete-Study-Guide' },
+            { label: 'GitHub', href: 'https://github.com/soale2/RAG-Cookbook' },
           ],
         },
       ],

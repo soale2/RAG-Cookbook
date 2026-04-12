@@ -174,7 +174,7 @@ function Hero() {
               Start with Foundations
             </Link>
             <a
-              href="https://github.com/soale2/RAG-Complete-Study-Guide"
+              href="https://github.com/soale2/RAG-Cookbook"
               className={styles.btnGhost}
               target="_blank"
               rel="noopener noreferrer"

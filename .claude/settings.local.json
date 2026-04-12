@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/soale/**)",
+      "Bash(mv RAG-Complete-Study-Guide RAG-Cookbook)"
+    ]
+  }
+}
