@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkrag_cookbook=globalThis.webpackChunkrag_cookbook||[]).push([[9640],{3292(o){o.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"naive-rag"}')}}]);
