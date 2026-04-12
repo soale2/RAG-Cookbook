@@ -59,6 +59,13 @@ const TRACKS = [
     modules: [],
     status: 'soon',
   },
+  {
+    id: 'vectorless-rag',
+    title: 'Vectorless RAG',
+    desc: 'Retrieval without embeddings. LLMs navigate document structure directly via tree indexes, BM25, or agentic traversal.',
+    modules: [],
+    status: 'soon',
+  },
 ];
 
 // ─── Curriculum diagram ───────────────────────────────────────────────────────

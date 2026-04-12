@@ -84,6 +84,16 @@ const config = {
         exclude: ['**/*.py', '**/.gitkeep'],
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'vectorless-rag',
+        path: 'vectorless-rag',
+        routeBasePath: 'vectorless-rag',
+        sidebarPath: require.resolve('./sidebars.js'),
+        exclude: ['**/*.py', '**/.gitkeep'],
+      },
+    ],
   ],
 
   themeConfig: {
@@ -108,6 +118,7 @@ const config = {
             { label: 'Advanced RAG', to: '/advanced-rag' },
             { label: 'Agentic RAG', to: '/agentic-rag' },
             { label: 'Graph RAG', to: '/graph-rag' },
+            { label: 'Vectorless RAG', to: '/vectorless-rag' },
           ],
         },
         {
